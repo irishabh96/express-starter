@@ -1,0 +1,56 @@
+{
+  "name": "Express-Started",
+  "version": "1.0.0",
+  "description": "Easy to get up and running",
+  "engines": {
+    "node": "12"
+  },
+  "scripts": {
+    "serve": "nodemon src/server.js --exec babel-node --ignore **/__tests__/** --ignore **/__mocks__/**",
+    "build": "babel src -d dist --ignore **/__tests__/**,**/__mocks__/**",
+    "lint": "eslint 'src/**/*.js'",
+    "unit": "jest \"src/.*\\.js$\" --coverage --forceExit",
+    "e2e": "cross-env JEST_ENV=e2e jest \"src/.*\\.js$\" --forceExit",
+    "_codecov": "codecov",
+    "_heroku": "heroku"
+  },
+  "author": {
+    "name": "Rishabh Bhatia",
+    "email": "irishabh96@gmail.com"
+  },
+  "dependencies": {
+    "chalk": "2.4.2",
+    "compression": "1.7.4",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-rate-limit": "5.0.0",
+    "helmet": "3.21.2",
+    "mongoose": "5.11.8",
+    "morgan": "1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
+    "@babel/node": "7.12.10",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/preset-env": "7.12.10",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "24.8.0",
+    "babel-plugin-lodash": "3.3.4",
+    "babel-plugin-root-import": "6.6.0",
+    "codecov": "3.8.1",
+    "cross-env": "5.2.0",
+    "eslint": "6.3.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.1.0",
+    "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.0",
+    "faker": "4.1.0",
+    "heroku": "7.42.1",
+    "jest": "24.8.0",
+    "nodemon": "1.19.1",
+    "prettier": "1.18.2",
+    "supertest": "6.0.1"
+  }
+}
